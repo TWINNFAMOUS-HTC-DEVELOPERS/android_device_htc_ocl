@@ -81,6 +81,9 @@ on late-fs
     write /sys/block/sda/queue/read_ahead_kb 2048
 
 on property:sys.boot_completed=1
+
+    setprop vendor.post_boot.parsed 1
+
     # Disable boot time fs tuning
     write /sys/block/sde/queue/read_ahead_kb 1024
     write /sys/block/sde/queue/nr_requests 128
