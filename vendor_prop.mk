@@ -133,7 +133,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.core_ctl_min_cpu=2 \
     ro.core_ctl_max_cpu=4 \
     ro.sys.fw.bg_apps_limit=60 \
-    ro.vendor.extension_library=libqti-perfd-client.so
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.am.reschedule_service=true \
+    sched.colocate.enable=1 \
+    sys.games.gt.prof=1
+
+# IOP
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.iop.enable_uxe=0 \
+    vendor.iop.enable_prefetch_ofr=0
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
