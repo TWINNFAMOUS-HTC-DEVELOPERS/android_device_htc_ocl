@@ -16,13 +16,13 @@
 
 BOARD_VENDOR := htc
 
-DEVICE_PATH := device/htc/ocn
+DEVICE_PATH := device/htc/ocl
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := htc_ocn,htc_ocnuhl,htc_ocnwhl,htc_ocndugl,htc_ocndtwl,ocn
+TARGET_OTA_ASSERT_DEVICE := htc_ocl,htc_ocluhl,htc_oclwhl,htc_ocldugl,htc_ocldtwl,ocn
 
 # Architecture
 TARGET_ARCH := arm64
@@ -173,7 +173,7 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_ocn
+TARGET_INIT_VENDOR_LIB := libinit_ocl
 TARGET_RECOVERY_DEVICE_MODULES := libinit_ocn
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.recovery
 
