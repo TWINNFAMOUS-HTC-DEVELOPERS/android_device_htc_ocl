@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=ocn
+DEVICE=ocl
 VENDOR=htc
 
 INITIAL_COPYRIGHT_YEAR=2017

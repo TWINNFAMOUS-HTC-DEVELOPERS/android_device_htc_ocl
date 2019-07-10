@@ -22,7 +22,7 @@ DEVICE_PATH := device/htc/ocl
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := htc_ocl,htc_ocluhl,htc_oclwhl,htc_ocldugl,htc_ocldtwl,ocn
+TARGET_OTA_ASSERT_DEVICE := htc_oclul
 
 # Architecture
 TARGET_ARCH := arm64
@@ -37,7 +37,7 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-TARGET_BOARD_PLATFORM := msm8998
+TARGET_BOARD_PLATFORM := sdm660
 
 TARGET_USES_UEFI := true
 
@@ -107,7 +107,7 @@ BOARD_USES_ALSA_AUDIO := true
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8998
+TARGET_BOOTLOADER_BOARD_NAME := SDM660
 TARGET_NO_BOOTLOADER := true
 
 # Camera
@@ -153,8 +153,8 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 234881024
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3724541952
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 58737033216
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4009754624
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 16719544320
 TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/config.fs
 TARGET_EXFAT_DRIVER := exfat
 TARGET_USES_MKE2FS := true
@@ -174,30 +174,30 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 # Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_ocl
-TARGET_RECOVERY_DEVICE_MODULES := libinit_ocn
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ocl
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.recovery
 
 # IPA
 USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE += user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1
-BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
-BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidkey.dummy=1 androidboot.fpsensor=fpc1145
+BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1
+BOARD_KERNEL_CMDLINE += swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidkey.dummy=1 androidboot.fpsensor=fpc1155
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
-TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_KERNEL_SOURCE := kernel/htc/msm8998
-TARGET_KERNEL_CONFIG := lineage_ocn_defconfig
+#TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_SOURCE := kernel/htc/ocl
+TARGET_KERNEL_CONFIG := sdm660_defconfig
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
 # LLVM
-TARGET_USE_SDCLANG := true
+#TARGET_USE_SDCLANG := true
 
 # Lineage Hardware
 JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
@@ -211,22 +211,20 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 
+###todo ADD from device ###
 # Shims
-TARGET_LD_SHIM_LIBS := /vendor/lib/hw/camera.msm8998.so|libcamera_shim.so:/system/lib64/lib-imsvideocodec.so|libims_shim.so
+TARGET_LD_SHIM_LIBS := /vendor/lib/hw/camera.sdm660.so|libcamera_shim.so:/system/lib64/lib-imsvideocodec.so|libims_shim.so
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
-
-# Release
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/ocn/releasetools
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_RIL_VARIANT := caf
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2018-11-01
+#VENDOR_SECURITY_PATCH := 2018-11-01
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk

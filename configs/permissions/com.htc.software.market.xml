@@ -17,6 +17,7 @@
 <permissions>
     <feature name="com.htc.software.HTC" />
     <feature name="com.htc.software.GPSense" />
-    <feature name="com.htc.software.OceanWHL" />
+    <feature name="com.htc.software.OceanLifeUL" />
     <feature name="com.htc.software.IHSense" />
+    <feature name="com.htc.software.screencapture" />
 </permissions>

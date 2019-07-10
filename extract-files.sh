@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=ocn
+DEVICE=ocl
 VENDOR=htc
 
 # Load extract_utils and do some sanity checks

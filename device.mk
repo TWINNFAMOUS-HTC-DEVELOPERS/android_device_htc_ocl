@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/htc/ocn/ocn-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/ocl/ocl-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -41,8 +41,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=25
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2560
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@4.0-impl \
     audio.a2dp.default \
-    audio.primary.msm8998 \
+    audio.primary.sdm660 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -169,11 +169,11 @@ PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    copybit.msm8998 \
-    gralloc.msm8998 \
-    hwcomposer.msm8998 \
+    copybit.sdm660 \
+    gralloc.sdm660 \
+    hwcomposer.sdm660 \
     libhwc2on1adapter \
-    memtrack.msm8998 \
+    memtrack.sdm660 \
     libdisplayconfig \
     libgenlock \
     liboverlay \
@@ -197,7 +197,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
-    fingerprint.msm8998 \
+    fingerprint.sdm660 \
     fingerprintd
 
 # Gatekeeper HAL
@@ -289,7 +289,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.ocn
+    android.hardware.light@2.0-service.ocl
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -339,10 +339,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.ocn-libperfmgr
+    android.hardware.power@1.2-service.ocl-libperfmgr
 
 PRODUCT_COPY_FILES += \
-    device/htc/ocn/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    device/htc/ocl/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
@@ -394,7 +394,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
-    thermal.msm8998
+    thermal.sdm660
 
 # USB
 PRODUCT_PACKAGES += \
@@ -425,7 +425,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
     android.hardware.vr@1.0-service \
-    vr.msm8998
+    vr.sdm660
 
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \

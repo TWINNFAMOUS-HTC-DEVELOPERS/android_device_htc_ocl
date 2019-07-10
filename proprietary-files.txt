@@ -99,7 +99,7 @@ vendor/etc/TAS2557_B.ftcfg
 etc/TFA_default_vol_level.conf
 vendor/firmware/Data.msc
 vendor/firmware/wdspver.cfg
-vendor/lib/hw/sound_trigger.primary.msm8998.so
+vendor/lib/hw/sound_trigger.primary.sdm660.so
 vendor/lib/libsmwrapper.so
 
 # Audio ACBD
@@ -155,9 +155,10 @@ vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 vendor/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so
 
 # Camera
-bin/mm-qcamera-daemon
+bin/mm-qcamera-app
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/csidtg_camera.xml
+vendor/etc/camera/csidtg_chromatix.xml
 vendor/etc/camera/imx362_chromatix_bear.xml
 vendor/etc/camera/ov8865_chromatix.xml
 vendor/etc/camera/ov5695_chromatix.xml
@@ -201,7 +202,7 @@ vendor/etc/camera/imx258_mono_chromatix.xml
 vendor/etc/camera/ov5670_f5670bq_chromatix.xml
 vendor/etc/camera/imx362_htc_chromatix.xml
 vendor/etc/camera/s5k3m2xm_chromatix_bear.xml
-vendor/lib/hw/camera.msm8998.so
+vendor/lib/hw/camera.sdm660.so
 vendor/lib/libawb_calibration.so
 vendor/lib/libBeautyChat.so
 vendor/lib/libcameraface.so
@@ -742,8 +743,8 @@ vendor/lib64/lib_fpc_tac_shared.so
 vendor/lib64/lib_htc_fp_hal_util.so
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.msm8998.so
-vendor/lib64/hw/gatekeeper.msm8998.so
+vendor/lib/hw/gatekeeper.sdm660.so
+vendor/lib64/hw/gatekeeper.sdm660.so
 
 lib/vendor.qti.gnss@1.0.so|8fb1b90a7a07ca18822f075fc8b1a62526c55c0c
 lib/libxt_native.so
@@ -827,7 +828,7 @@ vendor/lib/egl/libGLESv1_CM_adreno.so|0930a64d8889c184de31a085539e1b8b28520a31
 vendor/lib/egl/libGLESv2_adreno.so|8d998b3fd38024168ec1563cd77f1609c0d3139c
 vendor/lib/egl/libq3dtools_adreno.so|a2506b94eb0fe3c2bccc7c8e6d8b8d21bd314ae8
 vendor/lib/egl/libQTapGLES.so|7641cd4f894d86f53394bcdc421ecae254afaf30
-vendor/lib/hw/vulkan.msm8998.so|2431c6927e16895fc08139928d79eaec8289cae1
+vendor/lib/hw/vulkan.sdm660.so|2431c6927e16895fc08139928d79eaec8289cae1
 vendor/lib/libadreno_utils.so|9930d4a99e10bdc821e3609695100248d36b3913
 vendor/lib/libbccQTI.so|aa1220cad9df3c39c0c14c4a36546342cc518ad1
 vendor/lib/libC2D2.so|a110bf0568eef9e49b251b7750cf6e51c3c85969
@@ -846,7 +847,7 @@ vendor/lib64/egl/libGLESv1_CM_adreno.so|95497830d4e08c02a3b6d82bc7623f926d2ef9ed
 vendor/lib64/egl/libGLESv2_adreno.so|1b7b599f9b2a83e0a4230e9e6123764ad4eb8a68
 vendor/lib64/egl/libq3dtools_adreno.so|4bd18c19a4d8376311983303b0971a7aa1334897
 vendor/lib64/egl/libQTapGLES.so|dac820eea4d54f98f7e20a49b82404de6f09743b
-vendor/lib64/hw/vulkan.msm8998.so|3be022c667878484c483a5bb64c59389d6be7701
+vendor/lib64/hw/vulkan.sdm660.so|3be022c667878484c483a5bb64c59389d6be7701
 vendor/lib64/libadreno_utils.so|c2a2afcee56cad745ad5444c3385fb74c0fb9ff2
 vendor/lib64/libbccQTI.so|be1ae3a075c42dcb19bc6e1ecd7374f9aeae083c
 vendor/lib64/libC2D2.so|724684ac0e167bc729cbdea1ee9e21da248cfd58
@@ -958,8 +959,8 @@ vendor/firmware/ipa_fws.mdt
 vendor/bin/msm_irqbalance|9b2513151a5b3dc5f20893bc6b0bb0942185e5ab
 
 # Keystore
-vendor/lib64/hw/keystore.msm8998.so
-vendor/lib/hw/keystore.msm8998.so
+vendor/lib64/hw/keystore.sdm660.so
+vendor/lib/hw/keystore.sdm660.so
 
 # Keymaster
 vendor/lib/libkeymasterutils.so
@@ -1201,11 +1202,11 @@ vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so
 bin/nanoapp_cmd
 vendor/firmware/napp_list.cfg
 vendor/etc/sensors/sensor_def_qcomdev.conf
-lib/hw/sensors.msm8998.so
+lib/hw/sensors.sdm660.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/sensor_calibrate.so
-lib64/hw/sensors.msm8998.so
+lib64/hw/sensors.sdm660.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
@@ -1270,8 +1271,8 @@ vendor/firmware/venus.b04
 vendor/firmware/venus.mdt
 
 # VR
-vendor/lib/hw/vr.msm8998.so
-vendor/lib64/hw/vr.msm8998.so
+vendor/lib/hw/vr.sdm660.so
+vendor/lib64/hw/vr.sdm660.so
 
 # Wi-Fi Display
 -priv-app/WfdService/WfdService.apk|d4d1f7d9f610efeb2a61705320539012f55ec634
