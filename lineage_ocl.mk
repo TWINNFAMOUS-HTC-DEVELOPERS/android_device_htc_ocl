@@ -21,7 +21,7 @@ PRODUCT_RELEASE_NAME := ocl
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/htc/ocn/full_ocl.mk)
+$(call inherit-product, device/htc/ocl/full_ocl.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ocl

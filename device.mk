@@ -425,7 +425,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
     android.hardware.vr@1.0-service \
-    vr.sdm660
+    vr.msm8998
 
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
