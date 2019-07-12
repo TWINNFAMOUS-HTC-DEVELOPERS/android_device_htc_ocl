@@ -194,6 +194,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # LLVM
 TARGET_USE_SDCLANG := true
+SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-6.0.2/bin
+
+SDCLANG_LTO_DEFS := vendor/lineage/build/core/sdllvm-lto-defs.mk
+
 
 # Lineage Hardware
 JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
