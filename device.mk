@@ -182,7 +182,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system
 
 PRODUCT_PACKAGES += \
-    qdcm_calib_data_WQHD_JDI_S6D1HA2_5.5_command_mode_panel.xml
+    qdcm_calib_data_1080p_Tianma_NT36672_5.2_video_mode_panel.xml
     
 # Doze
 PRODUCT_PACKAGES += \
@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
     fingerprint.sdm660 \
     fingerprintd
 
-# Gatekeeper HAL
+# Gatekeeper HALqc
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
